@@ -6,8 +6,11 @@ const resolvers = {
     },
 
     Mutation: {
-        createTask: (_, { name }) => taskModel.createTask(name)
+        createTask: (_, { name }) => taskModel.createTask(name),
+        updateTask: (_, { id, name }) => taskModel.updateTask(id, name),
+        deleteTask: (_, {id}) => taskModel.deleteTask(id),
+        completeTask: (_, {id}) => taskModel.completeTask(id)
     }
 }
 
-module.exports = resolvers();
+module.exports = resolvers;

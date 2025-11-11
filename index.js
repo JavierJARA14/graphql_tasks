@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { ApolloServer } = require('apollo-server');
 const typeDefs = require('./schemas/tasksSchema');
 const resolvers = require('./controllers/tasksController');

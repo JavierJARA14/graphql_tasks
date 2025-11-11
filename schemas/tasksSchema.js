@@ -15,7 +15,15 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        """Crea una nueva tarea"""
-        createTask(name: String!, completed: Boolean!): Task
+        """ Crea una nueva tarea """
+        createTask(name: String!): Task
+        """ Actualiza una tarea """
+        updateTask(id: ID!, name: String!): Task
+        """ Elimina una tarea """
+        deleteTask(id:ID!): Task
+        """ Marca una tarea como completa """
+        completeTask(id:ID!): Task
     }
 `;
+
+module.exports = typeDefs;
